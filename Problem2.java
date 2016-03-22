@@ -8,9 +8,8 @@ public class Problem2 {
     int prevNum = 0;
     for (int curNum = 1; curNum < 4000000; curNum += prevNum) {
       prevNum = curNum - prevNum;
-      if ( curNum % 2 == 0) {
+      if (curNum % 2 == 0) {
         total += curNum;
-        System.out.printf("%d,", curNum);
       }
     }
     System.out.printf("\nSum total of even Fibonacci numbers below 4M: %d", total);
