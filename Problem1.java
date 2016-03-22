@@ -8,25 +8,18 @@ public class Problem1 {
   public static void main(String[] args) {
     int i = 1;
     int mult = 3;
-    ArrayList<Integer> thoseMults = new ArrayList<Integer>(0);
+    int total = 0;
     while (mult < 1000) {
-      thoseMults.add(mult);
+      total += mult;
       i++;
       mult = 3 * i;
     }
-    
     i = 0;
     mult = 5;
     while (mult < 1000) {
-      if (mult % 3 != 0) {
-        thoseMults.add(mult);
-      }
+      if ( mult % 3 != 0) {total += mult;}
       i++;
       mult = 5 * i;
-    }
-    int total = 0;
-    for ( Integer nums : thoseMults) {
-      total = total + nums;
     }
     System.out.printf("\nSum total of multiples of 3 and 5 beneath 1000: %d", total);
   }
